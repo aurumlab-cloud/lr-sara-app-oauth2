@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="sara-app - Aplicativo interno para integração OAuth2 com Google Workspace">
+    <meta name="robots" content="noindex, nofollow">
+    <title>sara-app | Aurum Lab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+            padding: 48px 32px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #718096;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .info-box {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 32px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .info-box h2 {
+            font-size: 18px;
+            color: #2d3748;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .info-box p {
+            font-size: 14px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .btn-login {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn-login:active {
+            transform: translateY(0);
+        }
+
+        .links {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 0 12px;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 12px;
+            color: #a0aec0;
+        }
+
+        .contact {
+            margin-top: 16px;
+            font-size: 13px;
+            color: #718096;
+        }
+
+        .contact a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 32px 24px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+            }
+
+            .logo {
+                width: 64px;
+                height: 64px;
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">SA</div>
+        
+        <h1>sara-app</h1>
+        <p class="subtitle">Aplicativo interno para integração OAuth2 com Google Workspace</p>
+
+        <div class="info-box">
+            <h2>🔐 Acesso Restrito</h2>
+            <p>Este aplicativo é de uso <strong>exclusivamente interno</strong> para integração com Cal.com, N8N e serviços Google.</p>
+        </div>
+
+        <!-- ALTERE A URL ABAIXO PARA SEU ENDPOINT DE AUTENTICAÇÃO OAUTH2 -->
+        <button class="btn-login" onclick="window.location.href='https://ios0zd.easypanel.host/auth/google'">
+            Entrar com Google
+        </button>
+
+        <div class="links">
+            <!-- ALTERE OS LINKS ABAIXO PARA OS GOOGLE DOCS PUBLICADOS -->
+            <a href="https://docs.google.com/document/d/SEU_ID_POLITICA/pub" target="_blank">Política de Privacidade</a>
+            <a href="https://docs.google.com/document/d/SEU_ID_TERMOS/pub" target="_blank">Termos de Uso</a>
+        </div>
+
+        <div class="contact">
+            <p><strong>Suporte:</strong></p>
+            <p>
+                <a href="mailto:aurumlab.cloud@gmail.com">aurumlab.cloud@gmail.com</a><br>
+                <a href="mailto:infra@aurumlab.cloud">infra@aurumlab.cloud</a><br>
+                <a href="https://wa.me/5588988136242" target="_blank">+55 88 98813-6242</a>
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Aurum Lab | Desenvolvido para LR - Consultório de Psicologia</p>
+            <p style="margin-top: 8px;">Holambra, São Paulo - Brasil</p>
+        </div>
+    </div>
+</body>
+</html>
